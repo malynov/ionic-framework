@@ -746,6 +746,7 @@ export namespace Components {
           * Values used to create the list of selectable days. By default every day is shown for the given month. However, to control exactly which days of the month to display, the `dayValues` input can take a number, an array of numbers, or a string of comma separated numbers. Note that even if the array days have an invalid number for the selected month, like `31` in February, it will correctly not show days which are not valid for the selected month.
          */
         "dayValues"?: number[] | number | string;
+        "disableHeader": boolean;
         /**
           * If `true`, the user cannot interact with the datetime.
          */
@@ -4720,6 +4721,7 @@ declare namespace LocalJSX {
           * Values used to create the list of selectable days. By default every day is shown for the given month. However, to control exactly which days of the month to display, the `dayValues` input can take a number, an array of numbers, or a string of comma separated numbers. Note that even if the array days have an invalid number for the selected month, like `31` in February, it will correctly not show days which are not valid for the selected month.
          */
         "dayValues"?: number[] | number | string;
+        "disableHeader"?: boolean;
         /**
           * If `true`, the user cannot interact with the datetime.
          */

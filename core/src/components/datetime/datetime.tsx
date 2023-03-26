@@ -439,6 +439,8 @@ export class Datetime implements ComponentInterface {
    */
   @Prop() showDefaultTimeLabel = true;
 
+  @Prop() disableHeader = true;
+  
   /**
    * The hour cycle of the `ion-datetime`. If no value is set, this is
    * specified by the current locale.
@@ -1900,6 +1902,10 @@ export class Datetime implements ComponentInterface {
    */
 
   private renderCalendarHeader(mode: Mode) {
+    if (this.disableHeader) {
+      return;
+    }
+
     const expandedIcon = mode === 'ios' ? chevronDown : caretUpSharp;
     const collapsedIcon = mode === 'ios' ? chevronForward : caretDownSharp;
 
